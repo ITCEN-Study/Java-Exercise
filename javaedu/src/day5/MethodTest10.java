@@ -1,4 +1,4 @@
-package day4;
+package day5;
 
 public class MethodTest10 {
 	public static void main(String[] args) {

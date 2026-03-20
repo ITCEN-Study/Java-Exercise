@@ -1,4 +1,4 @@
-package day4;
+package day5;
 public class MethodTest9 {
 	public static void main(String[] args) {
 		int p1[] = { 20, 10, 14, 30};
