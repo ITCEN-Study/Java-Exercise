@@ -1,17 +1,16 @@
-//import java.util.Scanner;
-package day5;
+package day6;
 
 
-
-public class ScannerTest1 {
+import java.util.Scanner;
+public class ScannerTest2 {
 	public static void main(String[] args) {
 		System.out.print("입력 : ");
-		java.util.Scanner sc = new java.util.Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		String a,b,c,d;
-		a = sc.next();
-		b = sc.next();
-		c = sc.next();
-		d = sc.next();
+		a = sc.nextLine();
+		b = sc.nextLine();
+		c = sc.nextLine();
+		d = sc.nextLine();
 		System.out.println("a = [" + a + "]");
 		System.out.println("b = [" + b+ "]");
 		System.out.println("c = [" + c+ "]");

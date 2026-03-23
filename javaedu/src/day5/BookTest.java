@@ -6,9 +6,10 @@ class Book {
 	int price;
 	
 	Book() {
-		this.title = "자바의 정석";
-		this.author = "남궁성";
-		this.price = 3000;
+//		this.title = "자바의 정석";
+//		this.author = "남궁성";
+//		this.price = 3000;
+		this("자바의 정석", "남궁성", 3000);
 	}
 	
 	Book(String title, String author, int price) {
@@ -35,6 +36,19 @@ public class BookTest {
 		System.out.println(b3.getBookInfo());
 		System.out.println(b4.getBookInfo());
 		System.out.println(b5.getBookInfo());
+		
+		Book[] ary = new Book[5];
+		ary[0] = new Book();
+		ary[1] = new Book("파이썬 기초", "강길동", 25000);
+		ary[2] = new Book("HTML/CSS", "김철수", 18000);
+		ary[3] = new Book("데이터베이스", "이영희", 32000);
+		ary[4] = new Book("Spring Boot", "박민수", 35000);
+		
+		for (int i=0; i<ary.length; i++)
+			System.out.println(ary[i].getBookInfo());
+		
+		for (Book elem : ary)
+			System.out.println(elem.getBookInfo());
 	}
 
 }

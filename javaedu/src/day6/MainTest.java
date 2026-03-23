@@ -1,8 +1,8 @@
-package day5;
+package day6;
 
 
 public class MainTest {
 	public static void main(String[] args) {
-		main(null);
+		main(null);	// new String[0]
 	}
 }

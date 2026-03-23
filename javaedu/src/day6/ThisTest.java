@@ -1,4 +1,4 @@
-package day5;
+package day6;
 
 class Toy {
 	int num;	
