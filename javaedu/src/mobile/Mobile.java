@@ -23,16 +23,16 @@ public  abstract class Mobile {
 	public void setMobileName(String mobileName) {
 		this.mobileName = mobileName;
 	}
-	public int getbatterySize() {
+	public int getBatterySize() {
 		return batterySize;
 	}
-	public void setbatterySize(int batterySize) {
+	public void setBatterySize(int batterySize) {
 		this.batterySize = batterySize;
 	}
-	public String getosType() {
+	public String getOsType() {
 		return osType;
 	}
-	public void setosType(String osType) {
+	public void setOsType(String osType) {
 		this.osType = osType;
 	}
 }
