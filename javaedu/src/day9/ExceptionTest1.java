@@ -1,0 +1,7 @@
+package day9;
+
+public class ExceptionTest1 {
+	public static void main(String[] args) {
+		
+	}
+}

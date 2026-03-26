@@ -1,4 +1,4 @@
-package day8.case3;
+package day9.case3.copy;
 
 public class TVFactory {
 	public static TV getTV(String beanName){

@@ -1,6 +1,6 @@
-package day8.case3;
+package day9.case1.copy;
 
-public class SamsungTV implements TV{
+public class SamsungTV {
 	public void powerOn(){
 		System.out.println("SamsungTV --- 전원을 켠다.");
 	}
@@ -13,5 +13,4 @@ public class SamsungTV implements TV{
 	public void volumnDown(){
 		System.out.println("SamsungTV --- 소리를 낮춘다.");
 	}
-
 }

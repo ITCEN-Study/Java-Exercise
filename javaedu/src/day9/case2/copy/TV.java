@@ -1,9 +1,8 @@
-package day8.case3;
+package day9.case2.copy;
 
 public interface TV {
 	public void powerOn();
 	public void powerOff();
 	public void volumnUp();
 	public void volumnDown();
-
 }

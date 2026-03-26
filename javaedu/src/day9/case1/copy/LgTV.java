@@ -1,4 +1,4 @@
-package day8.case1;
+package day9.case1.copy;
 
 public class LgTV {
 	public void turnOn(){
