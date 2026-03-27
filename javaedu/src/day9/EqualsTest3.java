@@ -1,18 +1,35 @@
 package day9;
 import java.util.Date;
+import java.util.Objects;
 class Value {
 	int value;
 	Value(int value) {
 		this.value = value;  
 	}
+//	@Override
+//	public boolean equals(Object obj) {
+//		boolean result = false;
+//		if (obj != null && obj instanceof Value)
+//			if (value == ((Value)obj).value)
+//				result = true;
+//		return result; 
+//	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(value);
+	}
 	@Override
 	public boolean equals(Object obj) {
-		boolean result = false;
-		if (obj != null && obj instanceof Value)
-			if (value == ((Value)obj).value)
-				result = true;
-		return result; 
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Value other = (Value) obj;
+		return value == other.value;
 	}
+	
 }
 
 public class EqualsTest3 {
