@@ -1,4 +1,4 @@
-package day9;
+package day10;
 import java.util.Random;
 class TestException extends Exception {
 	 private static final long serialVersionUID = 1L;	 
