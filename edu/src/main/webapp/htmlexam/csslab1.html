@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <style>
+    div {
+      width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 20px;
+      background: linear-gradient(to right, orange, green, yellow);
+      color: black;
+      font-family: sans-serif;
+    }
+    h2 { border-bottom: 1px solid white; padding-bottom: 10px; }
+    input[type="text"], input[type="number"] { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+<div>
+  <h2>성적을 입력하시오.</h2>
+  <form method="get" action="/edu/htmlexam/edu">
+    이름 : <input type="text" name="studentName" required><br>
+    평균 점수 : <input type="number" name="score" required><br>
+    <input type="submit" value="전송">
+    <input type="reset" value="재작성">
+  </form>
+</div>
+</body>
+</html>

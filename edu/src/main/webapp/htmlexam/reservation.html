@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+<body>
+<h2>펜션 예약 서비스</h2>
+<hr>
+<form method="post" action="/edu/htmlexam/reservation">
+  예약자명 : <input type="text" name="resName" required>
+  <br><br>
+  예약암호 : <input type="password" name="resPwd" required>
+  <br><br>
+  룸선택 :
+  <input type="radio" name="room" value="dooly">둘리
+  <input type="radio" name="room" value="heedong">희동
+  <input type="radio" name="room" value="douner">도우너
+  <input type="radio" name="room" value="ttocchi">또치
+  <br><br>
+  추가요청사항 :
+  <input type="checkbox" name="option" value="bbq">바베큐
+  <input type="checkbox" name="option" value="pool">수영장
+  <input type="checkbox" name="option" value="fishing">낚시
+  <input type="checkbox" name="option" value="breakfast">조식
+  <br><br>
+  예약날짜 : <input type="date" name="resDate">
+  <br><br>
+  <input type="submit" value="보내기">
+  <input type="reset" value="다시작성하기">
+</form>
+</body>
+</html>

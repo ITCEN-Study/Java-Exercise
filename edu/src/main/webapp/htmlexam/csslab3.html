@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <style>
+    /* 웹 폰트 적용 [cite: 99, 100] */
+    body {
+      font-family: 'Jua', sans-serif;
+    }
+
+    div {
+      /* div에만 배경색(그라데이션) 적용  */
+      background: linear-gradient(to bottom right, #fff9e6, #ffedbc);
+      width: 600px;
+      margin: 30px auto;
+      padding: 30px;
+      /* 라운드 및 보더 조절  */
+      border: 2px solid #f39c12;
+      border-radius: 30px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      /* 제목 그림자 및 컬러 설정 [cite: 100] */
+      text-shadow: 2px 2px 3px #ccc;
+      color: #d35400;
+      margin-top: 0;
+    }
+
+    form {
+      line-height: 2.2;
+    }
+
+    /* 입력 항목 라운드 처리 [cite: 84] */
+    input[type="text"], input[type="password"], input[type="date"] {
+      border-radius: 8px;
+      border: 1px solid #d1ccc0;
+      padding: 4px 8px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <h2>펜션 예약 서비스</h2>
+  <hr>
+  <form method="post" action="/edu/htmlexam/reservation">
+    예약자명 : <input type="text" name="resName" required><br>
+    예약암호 : <input type="password" name="resPwd" required><br>
+    룸선택 :
+    <input type="radio" name="room" value="dooly">둘리
+    <input type="radio" name="room" value="heedong">희동
+    <input type="radio" name="room" value="douner">도우너
+    <input type="radio" name="room" value="ttocchi">또치<br>
+    추가요청사항 :
+    <input type="checkbox" name="option" value="bbq">바베큐
+    <input type="checkbox" name="option" value="pool">수영장
+    <input type="checkbox" name="option" value="fishing">낚시
+    <input type="checkbox" name="option" value="breakfast">조식<br>
+    예약날짜 : <input type="date" name="resDate"><br>
+
+    <div class="buttons" style="background:none; border:none; width:auto; margin:20px 0; padding:0;">
+      <input type="submit" value="제출">
+      <input type="reset" value="초기화">
+    </div>
+  </form>
+</div>
+</body>
+</html>
