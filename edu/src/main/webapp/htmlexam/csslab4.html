@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
+    body {
+        font-family: 'Nanum Gothic', sans-serif;
+        text-align: center;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 180px);
+        grid-template-rows: repeat(2, auto);
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .image-box {
+        border: 1px solid black;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        background-color: white;
+        display: inline-block;
+    }
+
+    .image-box img {
+        width: 150px;
+        height: 150px;
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+    <h3>원하는 상품을 클릭하세요~~</h3>
+    <hr>
+
+    <div class="container">
+        <div class="image-box"><img src="../images/1.jpg" alt="img1"></div>
+        <div class="image-box"><img src="../images/2.jpg" alt="img2"></div>
+        <div class="image-box"><img src="../images/3.jpg" alt="img3"></div>
+        <div class="image-box"><img src="../images/4.jpg" alt="img4"></div>
+        <div class="image-box"><img src="../images/5.jpg" alt="img5"></div>
+        <div class="image-box"><img src="../images/6.jpg" alt="img6"></div>
+        <div class="image-box"><img src="../images/7.jpg" alt="img7"></div>
+        <div class="image-box"><img src="../images/8.jpg" alt="img8"></div>
+        <div class="image-box"><img src="../images/9.jpg" alt="img9"></div>
+        <div class="image-box"><img src="../images/10.jpg" alt="img10"></div>
+    </div>
+
+</body>
+</html>

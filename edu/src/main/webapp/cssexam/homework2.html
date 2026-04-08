@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이재혁의 HTML5 학습</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            margin: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            transition: font-weight 0.2s;
+        }
+        nav a:hover {
+            font-weight: bold;
+        }
+
+        main {
+            width: 80%;
+            max-width: 800px;
+        }
+
+
+        article {
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        article h2 {
+            color: #4a90e2;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        figure {
+            margin: 0 auto;
+            text-align: center;
+        }
+        figure img {
+            display: block;
+            margin: 10px auto;
+            max-width: 100%;
+            transition: opacity 0.3s;
+        }
+        figure img:hover {
+            opacity: 0.5;
+        }
+
+        aside {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            font-style: italic;
+            background-color: black; 
+    		color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>이재혁의 HTML5 학습</h1>
+        <nav>
+        <a href="https://www.w3.org">W3C</a>
+        <a href="https://www.w3schools.com">W3SCHOOLS</a>
+        <a href="https://itcen.com/index.do">ITCEN</a>
+    </nav>
+    </header>
+
+    
+
+    <main>
+        <section>
+            <article>
+                <h2>나의 소개</h2>
+                <p>이름 : 이재혁</p>
+                <p>별명 : 재혁</p>
+                <p>관심기술 : HTML5</p>
+                <p>취미 : 헬스, 게임</p>
+            </article>
+
+            <article>
+                <h2>올해 재미있게 읽은 책</h2>
+                <table>
+                    <tr>
+                        <th>제목</th>
+                        <th>장르</th>
+                    </tr>
+                    <tr>
+                        <td>용의자 X의 헌신</td>
+                        <td>추리</td>
+                    </tr>
+                    <tr>
+                        <td>연금술사</td>
+                        <td>소설</td>
+                    </tr>
+                    <tr>
+                        <td>숨결이 바람 될 때</td>
+                        <td>에세이</td>
+                    </tr>
+                </table>
+            </article>
+
+            <article>
+                <h2>자랑하고싶은 우리동네의 아름다운 곳</h2>
+                <p>경기도 남양주시 오남읍에 위치한 오남호수공원(구 오남저수지)은 2008년 조성된 약 3km 길이의 호수 둘레길과 음악분수, 스카이워크를 갖춘 힐링 명소입니다.</p>
+                <figure>
+                    <img src="../images/onam1.jpg" alt="오남호수공원" width="500">
+                    <figcaption>경기도 남양주시 오남에 있는 호수공원</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <aside>
+            <iframe width="500" height="281" src="https://www.youtube.com/embed/oWN7yJLgBcA" style="border:0;"></iframe>
+        </aside>
+    </main>
+
+    <footer>
+        <p>이 문서는 이재혁에 의해 HTML5와 CSS3 기술을 사용하여 2026년 4월 8일에 작성하였습니다. (ver 1.0)</p>
+    </footer>
+
+</body>
+</html>
