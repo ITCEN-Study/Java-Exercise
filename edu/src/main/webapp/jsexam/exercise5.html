@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습 1</title>
+<script src="util.js"></script>
+</head>
+<body>
+<script>
+    writeColor("자바스크립트 실습(5)", "h1", "magenta");
+
+    function sum(num) {
+        if (num === undefined) {
+            return;
+        }
+        let total = 0;
+        for (let i = 1; i <= num; i++) {
+            total += i;
+        }
+        return total;
+    }
+
+    for (let i = 0; i < 5; i++) {
+        let rand = Math.floor(Math.random() * 6);
+        let result;
+
+        if (rand === 0) {
+            result = sum();
+        } else {
+            result = sum(rand);
+        }
+
+        if (result !== undefined) {
+            write("호출 결과값 : " + result, "h2");
+        } else {
+            write("결과값이 없어요!!", "h3");
+        }
+    }
+</script>
+</body>
+</html>

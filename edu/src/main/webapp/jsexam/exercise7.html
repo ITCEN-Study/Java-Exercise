@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습 3</title>
+<script src="util.js"></script>
+</head>
+<body>
+<script>
+    function getKorDay(y, m, d) {
+        if (typeof y !== 'number' || typeof m !== 'number' || typeof d !== 'number') {
+            return undefined;
+        }
+        
+        const days = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+        const date = new Date(y, m - 1, d);
+        return days[date.getDay()];
+    }
+
+    let year = Number(prompt("년도를 입력하세요."));
+    let month = Number(prompt("월을 입력하세요."));
+    let day = Number(prompt("일을 입력하세요."));
+
+    let korDay = getKorDay(year, month, day);
+
+    if (korDay === undefined) {
+        writeColor("결과 없음", "h1", "red");
+    } else {
+        let msg = year + "년 " + month + "월 " + day + "일은 " + korDay + "입니다";
+        writeColor(msg, "h1", "blue");
+    }
+</script>
+</body>
+</html>

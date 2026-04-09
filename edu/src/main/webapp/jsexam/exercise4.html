@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 실습(4)</title>
+    <style>
+        h1 { 
+            color: darkmagenta; 
+            text-shadow: 2px 2px 5px gray; 
+        }
+        .dan-title { color: coral; }
+    </style>
+</head>
+<body>
+    <h1>자바스크립트로 구현하는 구구단</h1>
+    <hr>
+
+    <script>
+        var dan;
+        while (true) {
+            dan = window.prompt("1부터 9 사이의 숫자를 입력하세요.");
+            dan = parseInt(dan);
+            if (dan >= 1 && dan <= 9) {
+                break;
+            }
+        }
+
+        document.write("<h1 class='dan-title'>" + dan + " 단입니다.</h1>");
+        document.write("<hr>");
+
+        for (var i = 1; i <= 9; i++) {
+            document.write(dan + " x " + i + " = " + (dan * i) + "<br>");
+        }
+    </script>
+</body>
+</html>
