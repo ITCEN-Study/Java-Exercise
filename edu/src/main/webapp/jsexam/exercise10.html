@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exercise10</title>
+<script src="util.js"></script>
+<script>
+function printObject(p){
+    if (p === null || typeof p !== 'object') {
+        return;
+    }
+    
+    const tag = p.tag;
+    const color = p.color;
+    const msg = p.msg;
+    
+    writeColor(msg, tag, color);
+}
+
+window.onload = function(){
+    printObject({
+        tag: "h1",
+        color: "red",
+        msg: "첫 번째 메시지 (h1)"
+    });
+    
+    printObject({
+        tag: "h2",
+        color: "blue",
+        msg: "두 번째 메시지 (h2)"
+    });
+
+    printObject({
+        tag: "h3",
+        color: "green",
+        msg: "세 번째 메시지 (h3)"
+    });
+
+    printObject({
+        tag: "p",
+        color: "#ffa500",
+        msg: "네 번째 메시지 (p 태그, RGB값 사용)"
+    });
+
+    printObject({
+        tag: "div",
+        color: "purple",
+        msg: "다섯 번째 메시지 (div)"
+    });
+    
+    printObject("이것은 문자열이라 무시됩니다.");
+};
+</script>
+</head>
+<body>
+
+</body>
+</html>

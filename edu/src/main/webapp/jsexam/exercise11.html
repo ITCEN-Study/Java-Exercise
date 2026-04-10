@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise11</title>
+    <script src="util.js"></script>
+    <script>
+        function DayInfo(name, year, month, day) {
+            this.name = name;
+            this.year = year;
+            this.month = month;
+            this.day = day;
+        }
+
+        DayInfo.prototype.getMonthInfo = function() {
+            return this.name + "님은 " + this.month + "월에 태어났어요.";
+        };
+
+        DayInfo.prototype.getKorDay = function() {
+            const date = new Date(this.year, this.month - 1, this.day);
+            const dayNames = ["일", "월", "화", "수", "목", "금", "토"];
+            const korDay = dayNames[date.getDay()];
+            
+            return this.name + "님은 " + korDay + "요일에 태어났어요.";
+        };
+
+        window.onload = function() {
+            const p1 = new DayInfo("가영", 2001, 10, 27);
+            const p2 = new DayInfo("윤우", 2003, 3, 25);
+            const p3 = new DayInfo("재혁", 1999, 12, 25);
+            const p4 = new DayInfo("주현", 1997, 6, 17);
+            const p5 = new DayInfo("윤지", 2000, 10, 12);
+
+            const brothers = [p1, p2, p3, p4, p5];
+            const colors = ["navy", "magenta", "darkgreen", "brown", "darkblue"];
+
+            brothers.forEach((person, index) => {
+                writeColor(person.getMonthInfo(), "h3", colors[index]);
+                writeColor(person.getKorDay(), "h3", colors[index]);
+                
+                if (index < brothers.length - 1) {
+                    hr();
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
