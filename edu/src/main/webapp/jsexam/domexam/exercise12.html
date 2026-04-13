@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise12</title>
+</head>
+<body>
+    <script>
+        const randomNum = Math.floor(Math.random() * 3) + 1;
+        let targetUrl = "";
+        let siteName = "";
+
+        if (randomNum === 1) {
+            targetUrl = "https://www.daum.net";
+            siteName = "다음";
+        } else if (randomNum === 2) {
+            targetUrl = "https://www.naver.com";
+            siteName = "네이버";
+        } else {
+            targetUrl = "https://www.google.com";
+            siteName = "구글";
+        }
+
+        if (confirm(siteName + "으로 이동하시겠습니까?")) {
+            location.href = targetUrl;
+        } else {
+        	location.href = "/edu/first.html";
+        }
+    </script>
+</body>
+</html>

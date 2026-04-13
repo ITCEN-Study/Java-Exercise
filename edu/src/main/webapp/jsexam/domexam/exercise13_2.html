@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+    <h1>이벤트 모델-고전</h1>
+    <button id="btnRed">빨강색</button>
+    <button id="btnBlue">파랑색</button>
+    <button id="btnYellow">노랑색</button>
+    <h3 id="dateMsg"></h3>
+
+    <script>
+        const dateMsg = document.getElementById("dateMsg");
+        const today = new Date();
+        dateMsg.textContent = "오늘은 " + (today.getMonth() + 1) + "월 " + today.getDate() + "일입니다";
+
+        document.getElementById("btnRed").onclick = function() { dateMsg.style.color = 'red'; };
+        document.getElementById("btnBlue").onclick = function() { dateMsg.style.color = 'blue'; };
+        document.getElementById("btnYellow").onclick = function() { dateMsg.style.color = 'yellow'; };
+    </script>
+</body>
+</html>

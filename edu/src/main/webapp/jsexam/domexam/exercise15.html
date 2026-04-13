@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단 실습</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    button {
+        background-color: white;
+        border: 1.5px solid #5c7c9c;
+        border-radius: 10px;
+        padding: 15px 25px;
+        font-size: 1rem;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    button:hover {
+        background-color: #f0f4f8;
+        transform: translateY(-2px);
+    }
+
+    #result {
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 2;
+        color: #444;
+        width: 100%;
+    }
+
+    .dan-title {
+        color: #5c7c9c;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #5c7c9c;
+        display: inline-block;
+        padding: 0 20px 5px 20px;
+    }
+</style>
+</head>
+<body>
+
+    <h1 id="title">구구단</h1>
+
+    <nav id="btn-group">
+        <button>1단</button>
+        <button>2단</button>
+        <button>3단</button>
+        <button>4단</button>
+        <button>5단</button>
+        <button>6단</button>
+        <button>7단</button>
+        <button>8단</button>
+        <button>9단</button>
+    </nav>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('title').onclick = function() {
+            location.href = "https://ko.wikipedia.org/wiki/구구단";
+        };
+
+        const buttons = document.querySelectorAll('#btn-group button');
+        const resultDiv = document.getElementById('result');
+
+        buttons.forEach((btn, index) => {
+            btn.onclick = function() {
+                const dan = index + 1;
+                let output = `<div class="dan-title">${dan}단</div><br>`;
+                for (let i = 1; i <= 9; i++) {
+                    output += `${dan} * ${i} = ${dan * i}<br>`;
+                }
+                resultDiv.innerHTML = output;
+            };
+        });
+    </script>
+</body>
+</html>
