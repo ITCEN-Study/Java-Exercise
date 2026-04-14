@@ -1,25 +1,24 @@
+package core;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/first") // http://localhost:8088/edu/first?guest=이재혁
-public class FirstServlet extends HttpServlet {
+@WebServlet("/forward")
+public class ForwardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setContentType("text/html; charset=utf-8");
-		PrintWriter out = response.getWriter();
-		out.print("<h1>첫 번째 서블릿 수행</h1>");
-		out.print("<hr>");
-		out.println("<h2>반가워요 %s님!!</h2>".formatted(request.getParameter("guest")));
-		out.close();
+		System.out.println("ForwardServlet 수행");
+//		RequestDispatcher rd = 
+//				request.getRequestDispatcher("/first.html"); // 상대 URI
+		RequestDispatcher rd = request.getRequestDispatcher("http://www.naver.com/");
+		rd.forward(request, response);
 	}
-
 }

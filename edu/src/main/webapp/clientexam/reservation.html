@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Insert title here</title>
+  <title>펜션 예약 서비스</title>
   <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
   <style>
     body {
@@ -44,11 +44,11 @@
 <div>
   <h2>펜션 예약 서비스</h2>
   <hr>
-  <form method="post" action="/edu/htmlexam/reservation">
+  <form method="post" action="/edu/reservation">
     예약자명 : <input type="text" name="resName" required><br>
     예약암호 : <input type="password" name="resPwd" required><br>
     룸선택 :
-    <input type="radio" name="room" value="dooly">둘리
+    <input type="radio" name="room" value="dooly" checked>둘리
     <input type="radio" name="room" value="heedong">희동
     <input type="radio" name="room" value="douner">도우너
     <input type="radio" name="room" value="ttocchi">또치<br>
@@ -57,11 +57,11 @@
     <input type="checkbox" name="option" value="pool">수영장
     <input type="checkbox" name="option" value="fishing">낚시
     <input type="checkbox" name="option" value="breakfast">조식<br>
-    예약날짜 : <input type="date" name="resDate"><br>
-
-    <div class="buttons" style="background:none; border:none; width:auto; margin:20px 0; padding:0;">
-      <input type="submit" value="제출">
-      <input type="reset" value="초기화">
+    예약날짜 : <input type="date" name="resDate" required><br>
+    
+    <div class="buttons">
+      <input type="submit" value="보내기">
+      <input type="reset" value="다시작성하기">
     </div>
   </form>
 </div>
