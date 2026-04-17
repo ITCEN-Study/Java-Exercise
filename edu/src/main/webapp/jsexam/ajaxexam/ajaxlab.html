@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AJAX 실습 1</title>
+<style>
+    /* 결과 출력을 위한 스타일 */
+    #weatherInfo {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+    <h2 id="title">오늘의 날씨 정보</h2>
+    <div id="weatherInfo"></div>
+    <div id="imgContainer"></div>
+
+    <script>
+        const title = document.getElementById('title');
+        const colors = ['red', 'blue', 'green', 'orange', 'purple', 'magenta'];
+        
+        setInterval(() => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            title.style.color = randomColor;
+        }, 2000);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'content/weather.jsp', true);
+        
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const data = JSON.parse(xhr.responseText);
+                
+                const weatherInfo = document.getElementById('weatherInfo');
+                const imgContainer = document.getElementById('imgContainer');
+                
+                weatherInfo.innerText = "기온 : " + data.temp + " 도";
+                
+                const img = document.createElement('img');
+                img.src = "/edu/" + data.img;
+                img.width = 150;
+                imgContainer.appendChild(img);
+            }
+        };
+        
+        xhr.send();
+    </script>
+</body>
+</html>
